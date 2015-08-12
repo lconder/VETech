@@ -1,0 +1,43 @@
+extends layout
+
+block content
+	include barra.jade
+	.container
+		h2 Primero escoge a un dueño:
+		br
+		.content
+			table.table.table-bordered
+				thead
+					tr
+						th Nombre
+						th Dirección
+						th Teléfono
+						th Email
+						th Agregar
+				tbody
+					each val in duenos
+						tr
+							th=val.nombre
+							th=val.direccion
+							th=val.telefono
+							th=val.email
+							th 
+								a(href='#') Agregar
+				tfoot
+					tr
+						th.ts-pager.form-horizontal(colspan='4')
+							button.btn.btn-first(type='button')
+								i.icon-step-backward.glyphicon.glyphicon-step-backward
+							button.btn.btn-prev(type='button')
+								i.icon-arrow-left.glyphicon.glyphicon-backward
+							span.pagedisplay
+							button.btn.btn-next(type='button')
+								i.icon-arrow-right.glyphicon.glyphicon-forward
+							button.btn.btn-last(type='button')
+								i.icon-step-forward.glyphicon.glyphicon-step-forward
+							select(title='Mostrar elementos por página')
+								option(selected='selected', value='10') 10
+								option(value='20') 20
+								option(value='30') 30
+							select.pagenum.input-mini(title='Selecciona el número de página')
+	include footer.jade

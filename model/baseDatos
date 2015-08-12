@@ -1,0 +1,72 @@
+Insercion de datos a la base de Datos:
+
+db.perros.insert({
+	nombre:"Bela",
+	raza:"Boxer",
+	nacimiento:"2011-02-23",
+	sexo:false,
+	alimentacion:"croquetas",
+	id_perro:"12345",
+	descripcion:"Perra de color blanco, con mancha en los ojos, juguetona y alegre, convive bien con otros perros.",
+	consultas:[{
+				fecha:Date.now(),
+				sintomas:"Dolor en el pecho",
+				diagnostico:"Dolor causado por una caida",
+				receta:"Naproxeno 1 capsula cada 12 horas por 3 dias"
+			},
+			{
+				fecha:Date.now(),
+				sintomas:"Vacuna Puppy",
+				diagnostico:"3er Vacuna Cachorro",
+				receta:"Aplicacion de vacuna en la pierna derecha"
+			}],
+	id_dueno:"1234"
+})
+
+db.perros.insert({
+	nombre:"Spark",
+	raza:"Labrador",
+	nacimiento:"2010-03-18",
+	sexo:true,
+	alimentacion:"croquetas",
+	id_perro:"12346",
+	descripcion:"Perro color blanco con manchas negras y café, amigable con las personas pero rudo con otros perros",
+	consultas:[{
+				fecha: new Date("2014-10-18"),
+				sintomas:"Mordedura",
+				diagnostico:"Sangrado por una mordida de perro vecino",
+				receta:"Naproxeno 1 capsula cada 12 horas por 3 dias"
+			},
+			{
+				fecha: new Date("2014-11-23"),
+				sintomas:"Vacuna Quintuple",
+				diagnostico:"Vacuna Quintuple",
+				receta:"Aplicacion de vacuna en la pierna izquierda"
+			}],
+	id_dueno:"12345"
+})
+
+db.duenos.insert({
+	nombre:"Luis Conde",
+	direccion:"141 Poniente #1314 Col Castillotla",
+	telefono:"2221026541",
+	email:"conderodriguez.luis@outlook.com",
+	id_dueno:"1234"
+})
+
+db.duenos.insert({
+	nombre:"Fernando Conde",
+	direccion:"141 Poniente #1316 Col. San Bernabé",
+	telefono:"2221735855",
+	email:"fernando-conderdz@hotmail.com",
+	id_dueno:"12345"
+})
+
+db.duenos.insert({
+	nombre:"Ileana Conde",
+	direccion:"11 Sur #12516 Col. Centro",
+	telefono:"2225364975",
+	email:"iconde_rdz@yahoo.com.mx",
+	id_dueno:"12346"
+})
+

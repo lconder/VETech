@@ -1,0 +1,30 @@
+extends layout
+
+block content 
+	header
+		nav.navbar.navbar-default.navbar-static-top(role='navigation')
+			.navigation
+				.container
+					.navbar-header
+						button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='.navbar-collapse.collapse')
+							span.sr-only Toggle navigation
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+						.navbar-brand
+							a(href='/')
+								h1
+									span VETech
+					.navbar-collapse.collapse
+						.menu
+							ul.nav.nav-tabs(role='tablist')
+								li(role='presentation')
+									a.active(href='/') Inicio
+								li(role='presentation')
+									a.active(href='/Dogs') Nueva Consulta
+								li(role='presentation')
+									a.active(href='/Duenos') Alta Paciente
+								li(role='presentation')
+									a.active(href='#') Perros Perdidos
+								li(role='presentation')
+									a.active(href='#') Perros en Adopción

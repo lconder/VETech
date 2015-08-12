@@ -1,4 +1,14 @@
 extends layout
 
 block content
-  section 
+	include barra.jade
+	.slider
+		.img-responsive
+			ul.bxslider
+				li
+					img(src='/images/slider/1.jpg', alt='')
+				li
+					img(src='/images/slider/2.jpg', alt='')
+				li
+					img(src='/images/slider/3.jpg', alt='')
+	include footer.jade
