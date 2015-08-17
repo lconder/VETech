@@ -10,10 +10,7 @@ router.get('/', function(req, res, next) {
   console.log("Aplicación corriendo...")
 });
 
-router.get('/', function(req, res, next) {
-  res.render('');
-  console.log("Alta ")
-});
+
 
 
 module.exports = router;

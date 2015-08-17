@@ -18,13 +18,19 @@ var Perro = new Schema({
 	sexo: Boolean,
 	alimentacion: String,
 	id_perro: String,
+	imagen: String,
 	descripcion: String,
 	consultas: [{fecha: Date, sintomas: String, diagnostico: String, receta: String}]
+});	
+
+var Raza = new Schema({
+	nombre: String
 });
 
 
 
 mongoose.model('duenos',Dueno);
 mongoose.model('perros',Perro);
+mongoose.model('razas',Raza);
 mongoose.connect('mongodb://localhost/vetech');
 

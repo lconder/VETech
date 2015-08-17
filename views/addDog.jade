@@ -1,0 +1,61 @@
+extends layout
+
+block content
+	include barra.jade
+	.container
+		h2 Ingresa los datos del nuevo paciente:
+		br
+		.content
+			form.form-horizontal(action="/create", method="post", enctype="multipart/form-data")
+				fieldset
+					legend Datos del Paciente
+					.form-group
+						label.col-md-4.control-label(for='nombre') Nombre
+						.col-md-4
+							input#nombre.form-control.input-md(name='nombre', type='text', placeholder='Nombre de la mascota', required='')
+					.form-group
+						label.col-md-4.control-label(for='raza') Raza
+						.col-md-4
+							select#raza.form-control(name='raza')
+								each val in razas
+									option(value='#{val.nombre}') #{val.nombre}
+					.form-group
+						label.col-md-4.control-label(for='nacimiento') Fecha de Nacimiento
+						.col-md-4
+							.input-group
+								input#nacimiento.form-control(name='nacimiento', placeholder='Fecha de Nacimiento', type='date', required='')
+								span.input-group-addon DD-MM-AAAA
+					.form-group
+						label.col-md-4.control-label(for='sexo') Sexo
+						.col-md-4
+							label.radio-inline(for='sexo-0')
+								input#sexo-0(type='radio', name='sexo', value='true', checked='checked') 
+								| Macho
+							label.radio-inline(for='sexo-1')
+								input#sexo-1(type='radio', name='sexo', value='false', checked='checked') 
+								| Hembra
+					.form-group
+						label.col-md-4.control-label(for='alimentacion') Alimentaci&oacute;n
+						.col-md-4
+							input#alimentacion.form-control.input-md(name='alimentacion', type='text', placeholder='Alimentación', required='')
+							span.help-block Croquetas, Comida h&uacute;meda, Otro...
+					.form-group
+						label.col-md-4.control-label(for='idCollar') ID del Collar
+						.col-md-4
+							input#idCollar.form-control.input-md(name='idCollar', type='text', placeholder='123456', required='')
+							span.help-block N&uacute;mero del collar
+					.form-group
+						label.col-md-4.control-label(for='imagen') Imagen
+						.col-md-4
+							input#imagen.form-control.input-md(name='imagen', type='file', )
+							span.help-block Imagen del perro
+					.form-group
+						label.col-md-4.control-label(for='descripcion') Descripci&oacute;n
+						.col-md-4
+							textarea#descripcion.form-control(name='descripcion')
+					.form-group
+						label.col-md-4.control-label(for='Aceptar')
+						.col-md-4
+							input#idDueno.form-control.input-md(name='idDueno', type='hidden', value= id_dueno)
+							button.btn.btn-primary.readmore(type='submit') Aceptar 
+	include footer.jade

@@ -6,12 +6,21 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var multer = require('multer');
+var cloudinary = require('cloudinary');
 
+cloudinary.config({
+  cloud_name:"lconder",
+  api_key: "538936326982445",
+  api_secret: "cy_pz-vsi2nNNhknDHvaHfKZ4_4"
+});
 
 var routes = require('./routes/index');
 var perros = require('./routes/perros')
 var users = require('./routes/users');
 var duenos = require('./routes/duenos');
+var api = require('./routes/api');
+//var razas = require('./routes/razas');
 
 var app = express();
 
@@ -24,6 +33,7 @@ app.set('view engine', 'jade');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(multer({dest: "./public/images/dogs"}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -32,6 +42,8 @@ app.use('/users', users);
 app.use('/Dogs', perros);
 app.use('/Dogs/:id', perros);
 app.use('/Duenos', duenos);
+app.use('/create', perros);
+app.use('/Api', api);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
