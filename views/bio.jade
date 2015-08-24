@@ -4,43 +4,53 @@ block content
 	include barra.jade
 	.container
 	each val in perro
-		section#blog.container
-			.text-center
-				.wow.bounceInDown(data-wow-offset='0', data-wow-delay='0.3s')
-					h1=val.nombre
-			.blog
-				.row
-					.col-md-8
-						.blog-item
+		form.form-horizontal(action='/Dogs/#{val.id_perro}', method="post", name='updatedog', enctype='application/x-www-form-urlencoded')
+			section#blog.container
+				.text-center
+					.wow.bounceInDown(data-wow-offset='0', data-wow-delay='0.3s')
+						h1=val.nombre
+						input#inputNombre(type='hidden', value='#{val.id_perro}', name='id_perro')
+				.blog
+					.row
+						.col-md-8
+							.blog-item
+								.row
+									.col-xs-12.col-sm-2.text-center
+										.entry-meta
+											span#publish_date=val.nacimiento
+											span
+												i.fa.fa-user
+												a(href='#')= val.raza
+											span
+												i.fa.fa-heart
+												if val.sexo == true
+													a(href="#") Macho
+												else
+													a(href="#") Hembra
+									.col-xs-12.col-sm-10.blog-content
+										img.img-responsive.img-blog(src= '#{val.imagen}', width='100%', alt='')
+										p=val.descripcion
+										.col-sm-10
+											fieldset
+												legend Datos de la Consulta:
+												br
+												.form-group
+													label.control-label(for='sintomas') Síntomas
+													textarea#sintomas.form-control(name='sintomas')						
+								
+									button.btn.btn-primary.readmore(type="submit") Consultar 
+												i.fa.fa-angle-right
+						aside.col-md-4
+							.widget.categories
+							h3 Últimas consultas:
 							.row
-								.col-xs-12.col-sm-2.text-center
-									.entry-meta
-										span#publish_date=val.nacimiento
-										span
-											i.fa.fa-user
-											a(href='#')=val.id_dueno
-										span
-											i.fa.fa-heart
-											if val.sexo == true
-												a(href="#") Macho
-											else
-												a(href="#") Hembra
-								.col-xs-12.col-sm-10.blog-content
-									img.img-responsive.img-blog(src='/images/dogs/Bela.jpg', width='100%', alt='')
-									p=val.descripcion
-									a.btn.btn-primary.readmore(href='#') Consultar 
-										i.fa.fa-angle-right
-					aside.col-md-4
-						.widget.categories
-						h3 Últimas consultas:
-						.row
-							.col-sm-12
-								each i in val.consultas
-									.single_comments
-										strong
-											h4=i.diagnostico
-										h5=i.sintomas
-										h5=i.fecha
-										h5=i.receta					
+								.col-sm-12
+									each i in val.consultas
+										.single_comments
+											strong
+												h4=i.diagnostico
+											h5=i.sintomas
+											h5=i.fecha
+											h5=i.receta					
 					
 	include footer.jade

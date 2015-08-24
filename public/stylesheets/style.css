@@ -18,6 +18,14 @@ body {
 	overflow-x:hidden;
 }
 
+table{
+  color:#757575;
+}
+
+table a{
+  color: #3F51B5;
+}
+
 hi,h2,h3,h4,h5,h6 {
 	color:#333;
 	line-height:1.1em;
@@ -926,6 +934,14 @@ textarea.form-control {
 	color:#fff;
 	margin-bottom:50px;
 	font-size:20px;
+}
+
+.footer a{
+  color:#fff;
+}
+
+.footer a:hover{
+  color:#ED502E;
 }
 
 ul.social-network {

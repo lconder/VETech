@@ -6,6 +6,7 @@ db.perros.insert({
 	nacimiento:"2011-02-23",
 	sexo:false,
 	alimentacion:"croquetas",
+	imagen:"http://res.cloudinary.com/lconder/image/upload/v1439954649/12345_s6nhoy.jpg",
 	id_perro:"12345",
 	descripcion:"Perra de color blanco, con mancha en los ojos, juguetona y alegre, convive bien con otros perros.",
 	consultas:[{
@@ -20,7 +21,10 @@ db.perros.insert({
 				diagnostico:"3er Vacuna Cachorro",
 				receta:"Aplicacion de vacuna en la pierna derecha"
 			}],
-	id_dueno:"1234"
+	id_dueno:"1234",
+	perdido: false,
+	adoptado: false,
+	recompensa: ""
 })
 
 db.perros.insert({
@@ -29,6 +33,7 @@ db.perros.insert({
 	nacimiento:"2010-03-18",
 	sexo:true,
 	alimentacion:"croquetas",
+	imagen:"http://res.cloudinary.com/lconder/image/upload/v1439954650/12346_p7nz1v.jpg",
 	id_perro:"12346",
 	descripcion:"Perro color blanco con manchas negras y café, amigable con las personas pero rudo con otros perros",
 	consultas:[{
@@ -43,7 +48,26 @@ db.perros.insert({
 				diagnostico:"Vacuna Quintuple",
 				receta:"Aplicacion de vacuna en la pierna izquierda"
 			}],
-	id_dueno:"12345"
+	id_dueno:"12345",
+	perdido: false,
+	adoptado: false,
+	recompensa: ""
+})
+
+db.perros.insert({
+	nombre:"Huevito",
+	raza:"Bull Terrier",
+	nacimiento:"2012-04-23",
+	sexo:true,
+	alimentacion:"croquetas",
+	imagen:"http://res.cloudinary.com/lconder/image/upload/v1439960411/mclfgyyikztvyaswraff.jpg",
+	id_perro:"123467",
+	descripcion:"Perro color blanco agresivo para distraerlo arrojat croquetas",
+	consultas:[],
+	id_dueno:"12345",
+	perdido: true,
+	adoptado: false,
+	recompensa: "$1000"
 })
 
 db.duenos.insert({
@@ -135,4 +159,32 @@ db.razas.insert([
 	{nombre:"West Highland White Terrier"},
 	{nombre:"Yorkshire Terrier"},
 ])
+
+db.perdidos.insert({
+	nombre:"Spark",
+	raza:"Labrador",
+	nacimiento:"2010-03-18",
+	sexo:true,
+	alimentacion:"croquetas",
+	imagen:"http://res.cloudinary.com/lconder/image/upload/v1439954650/12346_p7nz1v.jpg",
+	id_perro:"12346",
+	descripcion:"Perro color blanco con manchas negras y café, amigable con las personas pero rudo con otros perros",
+	consultas:[{
+				fecha: new Date("2014-10-18"),
+				sintomas:"Mordedura",
+				diagnostico:"Sangrado por una mordida de perro vecino",
+				receta:"Naproxeno 1 capsula cada 12 horas por 3 dias"
+			},
+			{
+				fecha: new Date("2014-11-23"),
+				sintomas:"Vacuna Quintuple",
+				diagnostico:"Vacuna Quintuple",
+				receta:"Aplicacion de vacuna en la pierna izquierda"
+			}],
+	id_dueno:"12345",
+	fechaPerdida: new Date(2015,08,02),
+	recompensa:"$1000"
+})
+
+
 

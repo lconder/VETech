@@ -16,7 +16,8 @@ cloudinary.config({
 });
 
 var routes = require('./routes/index');
-var perros = require('./routes/perros')
+var perros = require('./routes/perros');
+var perdidos = require('./routes/perdidos');
 var users = require('./routes/users');
 var duenos = require('./routes/duenos');
 var api = require('./routes/api');
@@ -39,11 +40,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/Duenos', duenos);
 app.use('/Dogs', perros);
 app.use('/Dogs/:id', perros);
-app.use('/Duenos', duenos);
 app.use('/create', perros);
+app.use('/update', perros);
 app.use('/Api', api);
+app.use('/Perdidos', perdidos);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

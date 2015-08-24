@@ -20,8 +20,11 @@ var Perro = new Schema({
 	id_perro: String,
 	imagen: String,
 	descripcion: String,
-	consultas: [{fecha: Date, sintomas: String, diagnostico: String, receta: String}]
-});	
+	consultas: [{fecha: Date, sintomas: String, diagnostico: String, receta: String}],
+	recompensa: String,
+	perdido: Boolean,
+	adoptado: Boolean,
+});
 
 var Raza = new Schema({
 	nombre: String
