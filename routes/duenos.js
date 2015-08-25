@@ -12,4 +12,16 @@ router.get('/', function(req, res, next)
   });
 });
 
+router.get('/:id', function(req, res, next) 
+{
+	if(req.params.id)
+	{
+		Duenos.find({id_dueno : req.params.id}, function(err, duenos)
+      	{
+          console.log(duenos);
+          res.json(duenos);
+      	});
+	}
+});
+
 module.exports = router;

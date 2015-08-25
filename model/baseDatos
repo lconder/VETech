@@ -50,7 +50,7 @@ db.perros.insert({
 			}],
 	id_dueno:"12345",
 	perdido: false,
-	adoptado: false,
+	adoptado: true,
 	recompensa: ""
 })
 

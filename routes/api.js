@@ -26,6 +26,21 @@ router.get('/:id', function(req, res, next)
 	}
 });
 
+router.post('/:id', function(req, res, next){
+  console.log('Update API');
+  console.log(req.body);
+  /*Perros.update({id_perro:req.body.id_perro},{$push: {consultas:{fecha: Date.now(),diagnostico:"Esta es una prueba", receta:"Test"}}},function(err){
+      if(err){
+        console.log("Error");
+      }
+      else{
+        console.log("Actualizado");
+        res.render('index');  
+      }
+      
+  });*/
+});
+
 
 
 

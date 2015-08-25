@@ -36,4 +36,3 @@ mongoose.model('duenos',Dueno);
 mongoose.model('perros',Perro);
 mongoose.model('razas',Raza);
 mongoose.connect('mongodb://localhost/vetech');
-
