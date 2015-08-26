@@ -71,7 +71,7 @@ router.post('/', function(req, res, next)
 router.post('/:id', function(req, res, next){
   console.log('Update');
   console.log(req.body);
-  Perros.update({id_perro:req.body.id_perro},{$push: {consultas:{fecha: Date.now(),diagnostico:"Esta es una prueba", receta:"Test"}}},function(err){
+  Perros.update({id_perro:req.body.id_perro},{$push: {consultas:{fecha: Date.now(),sintomas:req.body.sintomas,diagnostico:req.body.diagnostico, receta:req.body.receta}}},function(err){
       if(err){
         console.log("Error");
       }

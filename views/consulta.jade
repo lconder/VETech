@@ -13,11 +13,19 @@ block content
 						th Raza
 						th Sexo
 						th Descripción
-						th Consulta
+						th Opciones
 				tbody
 					each val in perros
 						tr
-							th=val.nombre
+							if val.adoptado == true
+								th
+									i.fa.fa-heart=val.nombre
+							else if val.perdido == true
+								th
+									i.fa.fa-exclamation-triangle=val.nombre
+							else
+								th
+									i.fa.fa-check=val.nombre
 							th=val.raza
 							if val.sexo == true
 								th Macho
@@ -25,7 +33,8 @@ block content
 								th Hembra
 							th=val.descripcion
 							th 
-								a(href='Dogs/'+val.id_perro) Consultar
+								a(href='Dogs/'+val.id_perro)
+									i.fa.fa-plus-square &nbsp;Consultar
 				tfoot
 					tr
 						th.ts-pager.form-horizontal(colspan='5')

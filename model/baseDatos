@@ -79,6 +79,30 @@ db.duenos.insert({
 })
 
 db.duenos.insert({
+	nombre:"Fabiola Jiménez",
+	direccion:"netolli 9-A unidad habitacional malinalli, Cuautlancingo, Puebla",
+	telefono:"2221647560",
+	email:"fab_jmnz@hotmail.com",
+	id_dueno:"12347"
+})
+
+db.duenos.insert({
+	nombre:"Alejandro Jiménez Ortega",
+	direccion:"Circuito Real de la Hacienda #22 B Fraccionamiento Real de Sta. Clara II",
+	telefono:"2227639332",
+	email:"alex_artek@hotmail.com",
+	id_dueno:"66678"
+})
+
+db.duenos.insert({
+	nombre:"Gerardo Ramírez",
+	direccion:"Míchigan 95 fracc vista alegre puebla",
+	telefono:"24111261448",
+	email:"gerardoint@gmail.com",
+	id_dueno:"65578"
+})
+
+db.duenos.insert({
 	nombre:"Fernando Conde",
 	direccion:"141 Poniente #1316 Col. San Bernabé",
 	telefono:"2221735855",
@@ -147,6 +171,7 @@ db.razas.insert([
 	{nombre:"Rhodesian Ridgeback"},
 	{nombre:"Rottweiler"},
 	{nombre:"Samoyedo"},
+	{nombre:"Schnauzer"},
 	{nombre:"Setter Inglés"},
 	{nombre:"Setter Irlandés"},
 	{nombre:"Shar Pei"},

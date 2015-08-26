@@ -1,0 +1,40 @@
+extends layout
+
+block content
+	include barra.jade
+	.container
+		.col-lg-12
+			.text-center
+				.wow.bounceInDown(data-wow-offset='0', data-wow-delay='0.3s')
+					h2 Panel de Perros en Adopción
+				.wow.bounceInDown(data-wow-offset='0', data-wow-delay='0.6s')
+					p 
+			ul.portfolio-filter.text-center
+				li
+					a.btn.btn-default.active(href='#', data-filter='*') Todos
+				li
+					a.btn.btn-default(href='#', data-filter='.bootstrap') Machos
+				li
+					a.btn.btn-default(href='#', data-filter='.html') Hembras
+			each val in perros
+				.row
+					.portfolio-items
+						if val.sexo==true
+							.portfolio-item.bootstrap.col-xs-12.col-sm-4.col-md-3
+								.recent-work-wrap
+									img.img-responsive(src= '#{val.imagen}', alt='')
+									.overlay
+										.recent-work-inner
+											h3
+												a(href='#')=val.nombre
+											p=val.descripcion
+											
+						else
+							.portfolio-item.bootstrap.col-xs-12.col-sm-4.col-md-3
+								.recent-work-wrap
+									img.img-responsive(src= '#{val.imagen}', alt='')
+									.overlay
+										.recent-work-inner
+											h3
+												a(href='#')=val.nombre
+											p=val.descripcion

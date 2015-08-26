@@ -23,6 +23,8 @@ var users = require('./routes/users');
 var duenos = require('./routes/duenos');
 var api = require('./routes/api');
 var collar = require('./routes/collar');
+var panelAdopcion = require('./routes/panelAdopcion');
+var panelPerdidos = require('./routes/panelPerdidos');
 
 var app = express();
 
@@ -51,6 +53,10 @@ app.use('/Api', api);
 app.use('/Perdidos', perdidos);
 app.use('/Adoptados', adoptados);
 app.use('/Collar',collar);
+app.use('/panelAdopcion',panelAdopcion);
+app.use('/panelPerdidos',panelPerdidos);
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

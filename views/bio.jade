@@ -35,10 +35,13 @@ block content
 												legend Datos de la Consulta:
 												br
 												.form-group
-													label.control-label(for='sintomas') Síntomas
-													textarea#sintomas.form-control(name='sintomas')						
-								
-									button.btn.btn-primary.readmore(type="submit") Consultar 
+													label.control-label(for='sintomas') Síntomas:
+													textarea#sintomas.form-control(name='sintomas')
+													label.control-label(for='diagnostico') Diágnostico:
+													textarea#diagnostico.form-control(name='diagnostico')
+													label.control-label(for='recet') Receta:
+													textarea#receta.form-control(name='receta')						
+										button.btn.btn-primary.readmore(type="submit") Realizar Consulta 
 												i.fa.fa-angle-right
 						aside.col-md-4
 							.widget.categories
