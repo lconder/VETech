@@ -1,5 +1,3 @@
-Insercion de datos a la base de Datos:
-
 db.perros.insert({
 	nombre:"Bela",
 	raza:"Boxer",
@@ -184,32 +182,6 @@ db.razas.insert([
 	{nombre:"West Highland White Terrier"},
 	{nombre:"Yorkshire Terrier"},
 ])
-
-db.perdidos.insert({
-	nombre:"Spark",
-	raza:"Labrador",
-	nacimiento:"2010-03-18",
-	sexo:true,
-	alimentacion:"croquetas",
-	imagen:"http://res.cloudinary.com/lconder/image/upload/v1439954650/12346_p7nz1v.jpg",
-	id_perro:"12346",
-	descripcion:"Perro color blanco con manchas negras y café, amigable con las personas pero rudo con otros perros",
-	consultas:[{
-				fecha: new Date("2014-10-18"),
-				sintomas:"Mordedura",
-				diagnostico:"Sangrado por una mordida de perro vecino",
-				receta:"Naproxeno 1 capsula cada 12 horas por 3 dias"
-			},
-			{
-				fecha: new Date("2014-11-23"),
-				sintomas:"Vacuna Quintuple",
-				diagnostico:"Vacuna Quintuple",
-				receta:"Aplicacion de vacuna en la pierna izquierda"
-			}],
-	id_dueno:"12345",
-	fechaPerdida: new Date(2015,08,02),
-	recompensa:"$1000"
-})
 
 
 

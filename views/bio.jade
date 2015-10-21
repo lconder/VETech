@@ -36,11 +36,11 @@ block content
 												br
 												.form-group
 													label.control-label(for='sintomas') Síntomas:
-													textarea#sintomas.form-control(name='sintomas')
+													textarea#sintomas.form-control(name='sintomas', required)
 													label.control-label(for='diagnostico') Diágnostico:
-													textarea#diagnostico.form-control(name='diagnostico')
-													label.control-label(for='recet') Receta:
-													textarea#receta.form-control(name='receta')						
+													textarea#diagnostico.form-control(name='diagnostico', required)
+													label.control-label(for='receta') Receta:
+													textarea#receta.form-control(name='receta', required)						
 										button.btn.btn-primary.readmore(type="submit") Realizar Consulta 
 												i.fa.fa-angle-right
 						aside.col-md-4

@@ -14,6 +14,21 @@ router.get('/', function(req, res, next)
   });
 });
 
+router.post('/:id', function(req, res, next){
+  console.log('Update perdidos');
+  console.log(req.body);
+  Perros.update({id_perro:req.params.id},{perdido:req.body.perdido},function(err,perros)
+  {
+      if(err){
+        console.log("Error");
+      }
+      else{
+        console.log("Actualizado");
+        res.json({"objetos":[perros]});
+      }
+      
+  });
+});
 
 
 

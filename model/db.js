@@ -35,4 +35,4 @@ var Raza = new Schema({
 mongoose.model('duenos',Dueno);
 mongoose.model('perros',Perro);
 mongoose.model('razas',Raza);
-mongoose.connect('mongodb://localhost/vetech');
+mongoose.connect(process.env.OPENSHIFT_MONGODB_DB_URL + process.env.OPENSHIFT_APP_NAME);

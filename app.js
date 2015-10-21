@@ -43,16 +43,26 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+
 app.use('/Duenos', duenos);
+
+
 app.use('/Dogs', perros);
 app.use('/Dogs/:id', perros);
 app.use('/create', perros);
 app.use('/update', perros);
+
 app.use('/update', api);
 app.use('/Api', api);
+
 app.use('/Perdidos', perdidos);
+app.use('/update', perdidos);
+
 app.use('/Adoptados', adoptados);
+app.use('/update', adoptados);
+
 app.use('/Collar',collar);
+
 app.use('/panelAdopcion',panelAdopcion);
 app.use('/panelPerdidos',panelPerdidos);
 

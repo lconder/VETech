@@ -10,6 +10,9 @@ router.get('/', function(req, res, next) {
   console.log("Aplicación corriendo...")
 });
 
+router.get('/evento', function(req, res, next) {
+  res.render('index');
+});
 
 
 
